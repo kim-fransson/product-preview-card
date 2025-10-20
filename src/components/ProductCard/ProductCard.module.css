@@ -1,3 +1,13 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
 .wrapper {
   display: flex;
   flex-direction: column;
@@ -6,11 +16,14 @@
   max-width: 350px;
   /* show border radius */
   overflow: hidden;
+  box-shadow: var(--shadow-elevation-medium);
 
   @media (min-width: 40rem) {
     flex-direction: row;
     max-width: 600px;
   }
+
+  animation: fadeIn 1500ms ease-out both;
 }
 
 .imageWrapper {
@@ -95,7 +108,12 @@
   }
 }
 
+.icon {
+  transition: transform 500ms ease-in;
+}
+
 .button {
+  cursor: pointer;
   border: none;
   display: flex;
   justify-content: center;
@@ -106,9 +124,20 @@
   background: hsl(var(--color-green-500));
   color: hsl(var(--color-white));
   font-weight: var(--weight-bold);
+  outline-offset: 2px;
+  transition: background 500ms ease-in;
 
   @media (min-width: 40rem) {
     margin-top: var(--spacing-100);
     font-size: calc(14rem / 16);
+  }
+
+  @media (hover: hover) {
+    &:hover,
+    &:focus-visible {
+      transition: background 250ms ease-out;
+      background: hsl(var(--color-green-700));
+      transition-delay: 100ms;
+    }
   }
 }

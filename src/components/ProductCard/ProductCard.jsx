@@ -44,7 +44,7 @@ function ProductCard({ product }) {
           )}
         </div>
         <button className={styles.button}>
-          <CartIcon />
+          <CartIcon className={styles.icon} />
           Add to cart
         </button>
       </div>
