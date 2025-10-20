@@ -1,4 +1,11 @@
 .main {
-  height: 100%;
-  padding: 80px 12px 0px 12px;
+  display: grid;
+  justify-items: center;
+  min-height: 100%;
+  padding: 80px 12px;
+
+  @media (min-width: 40rem) {
+    padding: 84px;
+    align-items: center;
+  }
 }

@@ -82,6 +82,8 @@ html {
   --spacing-200: 16px;
   --spacing-100: 8px;
   --spacing-50: 4px;
+
+  --tablet-and-larger: 768px;
 }
 
 body {

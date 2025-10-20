@@ -15,7 +15,7 @@ function ProductCard({ product }) {
     <article className={styles.wrapper}>
       <picture className={styles.imageWrapper}>
         <source
-          media={`(min-width: ${768 / 16}rem)`}
+          media={`(min-width: 40rem)`}
           srcSet={images.desktop.url}
         />
         <img alt={images.alt} src={images.mobile.url} />
@@ -23,7 +23,7 @@ function ProductCard({ product }) {
 
       <div className={styles.innerWrapper}>
         <span className={styles.category}>{category}</span>
-        <h1 className={styles.title}>{title}</h1>
+        <h2 className={styles.title}>{title}</h2>
         <p className={styles.description}>{description}</p>
         <div className={styles.priceWrapper}>
           <div>

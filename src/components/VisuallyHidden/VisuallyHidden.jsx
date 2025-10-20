@@ -4,7 +4,11 @@ import React from "react";
 
 import styles from "./VisuallyHidden.module.css";
 
-const VisuallyHidden = ({ children, ...delegated }) => {
+const VisuallyHidden = ({
+  children,
+  as: Template = "span",
+  ...delegated
+}) => {
   const [forceShow, setForceShow] = React.useState(false);
 
   React.useEffect(() => {
@@ -36,9 +40,9 @@ const VisuallyHidden = ({ children, ...delegated }) => {
   }
 
   return (
-    <span className={styles.visuallyHidden} {...delegated}>
+    <Template className={styles.visuallyHidden} {...delegated}>
       {children}
-    </span>
+    </Template>
   );
 };
 

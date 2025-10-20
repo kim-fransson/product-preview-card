@@ -1,16 +1,30 @@
 .wrapper {
   display: flex;
   flex-direction: column;
+  height: fit-content;
   border-radius: var(--spacing-100);
+  max-width: 350px;
   /* show border radius */
   overflow: hidden;
+
+  @media (min-width: 40rem) {
+    flex-direction: row;
+    max-width: 600px;
+  }
 }
 
 .imageWrapper {
-  min-width: 350px;
+  flex: 1;
+  height: 342px;
   & img {
+    height: 100%;
     width: 100%;
     object-fit: cover;
+  }
+
+  @media (min-width: 40rem) {
+    height: revert;
+    min-width: 300px;
   }
 }
 
@@ -22,13 +36,17 @@
   padding: var(--spacing-400);
   background: hsl(var(--color-white));
   color: hsl(var(--color-black));
+
+  @media (min-width: 40rem) {
+    justify-content: center;
+  }
 }
 
 .category {
   color: hsl(var(--color-grey));
   font-weight: var(--weight-medium);
   font-size: calc(12rem / 16);
-  line-height: calc(14rem / 16);
+  line-height: 120%;
   letter-spacing: calc(5rem / 16);
   text-transform: uppercase;
 }
@@ -37,47 +55,60 @@
   font-family: var(--font-serif);
   font-weight: var(--weight-bold);
   font-size: calc(32rem / 16);
-  line-height: calc(32rem / 16);
+  line-height: 1;
 }
 
 .description {
   font-weight: var(--weight-medium);
-  font-size: calc(14rem / 16);
   color: hsl(var(--color-grey));
+
+  @media (min-width: 40rem) {
+    font-size: calc(14rem / 16);
+  }
 }
 
 .priceWrapper {
   display: flex;
   align-items: center;
   gap: var(--spacing-200);
+
+  @media (min-width: 40rem) {
+    margin-top: var(--spacing-100);
+  }
 }
 
 .discounted {
   font-family: var(--font-serif);
   font-weight: var(--weight-bold);
   font-size: calc(32rem / 16);
-  line-height: calc(32rem / 16);
+  line-height: 1;
   color: hsl(var(--color-green-500));
 }
 
 .original {
   font-weight: var(--weight-medium);
-  font-size: calc(13rem / 16);
-  line-height: calc(16rem / 16);
   text-decoration-line: line-through;
   color: hsl(var(--color-grey));
+
+  @media (min-width: 40rem) {
+    font-size: calc(13rem / 16);
+  }
 }
 
 .button {
   border: none;
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: var(--spacing-100);
   padding: var(--spacing-200);
   border-radius: var(--spacing-100);
   background: hsl(var(--color-green-500));
   color: hsl(var(--color-white));
   font-weight: var(--weight-bold);
-  font-size: calc(14rem / 16);
-  line-height: calc(15rem / 16);
+
+  @media (min-width: 40rem) {
+    margin-top: var(--spacing-100);
+    font-size: calc(14rem / 16);
+  }
 }
