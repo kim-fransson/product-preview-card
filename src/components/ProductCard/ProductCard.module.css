@@ -13,14 +13,14 @@
   flex-direction: column;
   height: fit-content;
   border-radius: var(--spacing-100);
-  max-width: 350px;
+  max-width: calc(350rem / 16);
   /* show border radius */
   overflow: hidden;
   box-shadow: var(--shadow-elevation-medium);
 
   @media (min-width: 40rem) {
     flex-direction: row;
-    max-width: 600px;
+    max-width: calc(600rem / 16);
   }
 
   animation: fadeIn 1500ms ease-out both;
